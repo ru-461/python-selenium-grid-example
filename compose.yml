@@ -1,0 +1,16 @@
+services:
+  app:
+    build: docker/app
+    tty: true
+    ports:
+      - 8000:8000
+    volumes:
+      - ./src:/app
+
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - 4444:4444
+      - 7900:7900
+    volumes:
+      - /dev/shm:/dev/shm
