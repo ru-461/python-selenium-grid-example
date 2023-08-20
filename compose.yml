@@ -2,8 +2,6 @@ services:
   app:
     build: docker/app
     tty: true
-    ports:
-      - 8000:8000
     volumes:
       - ./src:/app
 
