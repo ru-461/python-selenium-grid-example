@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:slim-bullseye
 
 ENV TZ=Asia/Tokyo
 ENV APP_ROOT=/app
