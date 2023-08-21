@@ -1,6 +1,5 @@
 FROM python:slim-bullseye
 
-ENV TZ=Asia/Tokyo
 ENV APP_ROOT=/app
 ENV SELENIUM_HUB_URL=http://selenium:4444/wd/hub
 ENV PYTHONDONTWRITEBYTECODE 1
