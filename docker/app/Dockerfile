@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR $APP_ROOT
 
-COPY ./requirements.txt .
+COPY ./docker/app/requirements.txt .
 
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt

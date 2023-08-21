@@ -1,7 +1,9 @@
 services:
   app:
-    build: docker/app
     tty: true
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
     volumes:
       - ./src:/app
 
