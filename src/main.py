@@ -2,7 +2,6 @@ import os
 
 from dotenv import load_dotenv
 from selenium import webdriver
-from selenium.webdriver.common import options
 
 # load .env
 load_dotenv()
@@ -35,8 +34,10 @@ def init_webdriver() -> webdriver.Chrome:
     Returns:
         webdriver.Chrome: ChromeWebDriver
     """
+    # Option
+    chrome_options = webdriver.ChromeOptions()
     # Create
-    driver = webdriver.Remote(command_executor=selenium_hub_url)
+    driver = webdriver.Remote(command_executor=selenium_hub_url, options=chrome_options)
 
     # Maximize
     driver.maximize_window()
