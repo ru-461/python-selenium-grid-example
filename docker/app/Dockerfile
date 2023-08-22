@@ -1,11 +1,6 @@
-FROM python:slim-bullseye
+FROM python:3.11-slim-bullseye
 
-ENV APP_ROOT=/app
-ENV SELENIUM_HUB_URL=http://selenium:4444/wd/hub
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-WORKDIR $APP_ROOT
+WORKDIR /app
 
 COPY ./docker/app/requirements.txt .
 
